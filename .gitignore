@@ -5,8 +5,10 @@ __pycache__/
 # C extensions
 *.so
 
-# Ignore all text files
+# Ignore all text files except requirements.txt
 *.txt
+!requirements.txt
+
 
 # Distribution / packaging
 .Python
