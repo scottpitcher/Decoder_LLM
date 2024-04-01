@@ -51,6 +51,15 @@ with open(output_file_train,"w", encoding='utf-8') as outfile: # Opening the out
             characters = set(text)
             vocab.update(characters)
 
+with open(output_file_val,"w", encoding='utf-8') as outfile: # Opening the output file
+    for filename in tqdm(files_val, total = len(files_val)): # Looping over every file until max_count reached
+        file_path = os.path.join(folder_path, filename)
+        with lzma.open(file_path, 'rt', encoding='utf-8') as infile:
+            text = infile.read()
+            outfile.write(text)
+            characters = set(text)
+            vocab.update(characters)
+
 # Writing all of our vocabulary to our Vocab file
 with open(vocab_file, 'w', encoding='utf-8') as vfile:
     for char in vocab:
