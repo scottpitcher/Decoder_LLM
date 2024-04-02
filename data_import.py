@@ -7,10 +7,12 @@ import concurrent.futures
 
 # Creating a function to import files from folder
 def xz_files_in_dir(directory):
-    files =[] # initialising the files
-    for filename in os.listdir(directory): #Looping over all files in the folder
-        files.append(filename) # Appending our files list
+    files = []  # Initialising the files list
+    for filename in os.listdir(directory):  # Looping over all files in the folder
+        if filename.endswith('.xz'):  # Check if the file is an .xz file
+            files.append(filename)  # Appending our files list
     return files
+
     
 
 folder_path = "/Users/scottpitcher/Desktop/python/Github/Data/" # Directory of the folder holding our .xz files
