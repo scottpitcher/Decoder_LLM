@@ -37,7 +37,7 @@ n_embd = 32         # Dimensionality of the input
 n_head = 1          # 
 dropout = 0.2       # Dropout rate during training
 n_layer= 1          # How many layers of blocks
-run_time= 60*60*3   # Runtime for training (hours)
+run_time= 60*60*13  # Runtime for training (hours)
 
 class ChunkedTextIterableDataset(IterableDataset):
     def __init__(self, filename, tokenizer, max_length=512):
