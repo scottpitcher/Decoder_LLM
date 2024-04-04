@@ -279,14 +279,4 @@ for epoch in range(num_epochs):
 # Save the model's state dictionary
 torch.save(model.state_dict(), 'gpt_language_model.pth')
 
-prompt_text = "The quick brown fox"
-encoded_prompt = tokenizer.encode(prompt_text, add_special_tokens=False, return_tensors="pt")
-encoded_prompt = encoded_prompt.to(device)
-
-max_new_tokens = 50  # Adjust as needed
-generated_tokens = model.generate(encoded_prompt, max_new_tokens=max_new_tokens)
-
-generated_text = tokenizer.decode(generated_tokens[0], skip_special_tokens=True)
-print(generated_text)
-
 
