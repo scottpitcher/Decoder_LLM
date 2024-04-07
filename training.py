@@ -21,7 +21,6 @@ device =  'cuda' if torch.cuda.is_available() else 'mps' if torch.backends.mps.i
 print(device) # Checking that mps is the device used
 
 
-
 # Load the BERT uncased tokenizer
 tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
 
