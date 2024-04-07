@@ -27,13 +27,13 @@ tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
 
 # Get the vocabulary size
 vocab_size = len(tokenizer)
-
 block_size = 32     # 
 batch_size = 16     # How many batches until model parameters are updated
 learning_rate= 3e-3 # Learning rate of the model
 num_epochs = 10     # Total amount of iterations for training to loop through
 eval_iters = 100    # Amount of iters until loss is reported in training loop
 n_embd = 32         # Dimensionality of the input
+hidden_dim = 128    # Dimensionality within FFWD 
 n_head = 1          # 
 dropout = 0.2       # Dropout rate during training
 n_layer= 1          # How many layers of blocks
@@ -93,9 +93,9 @@ class FeedForward(nn.Module):
     def __init__(self, n_embd):
         super().__init__()
         self.net = nn.Sequential(
-            nn.Linear(n_embd, 4*n_embd),
+            nn.Linear(n_embd, hidden_dim),
             nn.ReLU(),
-            nn.Linear(4*n_embd, n_embd),
+            nn.Linear(hidden_dim, n_embd),
             nn.Dropout(dropout) # Reduce overfit
         )
     
@@ -278,5 +278,3 @@ for epoch in range(num_epochs):
 
 # Save the model's state dictionary
 torch.save(model.state_dict(), 'gpt_language_model.pth')
-
-
