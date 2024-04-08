@@ -13,7 +13,7 @@ import transformers
 from transformers import AutoTokenizer
 from torch.utils.data import Dataset, DataLoader, IterableDataset
 from torch.nn.utils.rnn import pad_sequence
-
+ 
 device =  'cuda' if torch.cuda.is_available() else 'mps' if torch.backends.mps.is_available() else 'cpu'
 print(device)
 
