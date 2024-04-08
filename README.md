@@ -3,8 +3,9 @@
 
 
 ## Social Links
-Linkedin: https://www.linkedin.com/in/scottpitcher1
+Linkedin: https://www.linkedin.com/in/scottpitcher1 \n
 Github: https://github.com/scottpitcher
+
 Website: https://www.scottpitcher.com/
 
 ## Sources For This Project
