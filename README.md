@@ -1,14 +1,15 @@
 # Personal Project: Building a Decoder LLM From Scratch
-### Why did I do this project?
-
 
 # Tools Used
 ## OpenWebText Download: https://skylion007.github.io/OpenWebTextCorpus/
 ## Amazon Web Services (AWS): https://aws.amazon.com
 #### Storage (S3), CloudComputing (EC2)
 ## Visual Studio Code: https://code.visualstudio.com
+## Set-Up
+Ensure you are using Python 3.10+
+In Terminal: ```which python3```
+Installing Requirements ```pip install -r requirements.txt```
 
-```print(hello)```
 ## Social Links
 Linkedin: https://www.linkedin.com/in/scottpitcher1
 
