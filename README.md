@@ -3,7 +3,8 @@
 
 
 ## Social Links
-Linkedin: https://www.linkedin.com/in/scottpitcher1 \n
+Linkedin: https://www.linkedin.com/in/scottpitcher1
+
 Github: https://github.com/scottpitcher
 
 Website: https://www.scottpitcher.com/
