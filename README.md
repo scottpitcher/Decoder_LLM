@@ -8,6 +8,7 @@
 ## Set-Up
 Ensure you are using Python 3.10+
 In Terminal: ```which python3```
+
 Installing Requirements ```pip install -r requirements.txt```
 
 ## Social Links
